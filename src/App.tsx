@@ -8,10 +8,10 @@ function App() {
     <BrowserRouter>
       <ThemeProvider defaultTheme="dark">
         <Layout>
-        <Routes>
-              <Route path="/" element={<Dashboard />} />
-              <Route path="/city/:cityName" element={<CityPage />} />
-            </Routes>
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/city/:cityName" element={<CityPage />} />
+          </Routes>
         </Layout>
       </ThemeProvider>
     </BrowserRouter>
