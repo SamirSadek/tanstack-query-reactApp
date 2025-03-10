@@ -3,8 +3,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { Layout } from "./components/layout";
 import { ThemeProvider } from "./context/theme-provider";
-import Dashboard from "./components/pages/weather-dashboard";
-import CityPage from "./components/pages/city-page";
+import CityPage from "./pages/city-page";
+import { WeatherDashboard } from "./pages/weather-dashboard";
 function App() {
   const queryClient = new QueryClient();
   return (
@@ -13,7 +13,7 @@ function App() {
         <ThemeProvider defaultTheme="dark">
           <Layout>
             <Routes>
-              <Route path="/" element={<Dashboard />} />
+              <Route path="/" element={<WeatherDashboard />} />
               <Route path="/city/:cityName" element={<CityPage />} />
             </Routes>
           </Layout>
